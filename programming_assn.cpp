@@ -33,11 +33,11 @@ int main()
       std::cout << "in the child process: " << endl << parent << std::endl;
       pid_t ppid = getppid(); // the parent process id
       pid_t pid = getpid(); // the current process id
-      cout << "the current process id is: " << pid << endl;
-      if(ppid < 0)
-	 cout << "there is no parent for this process." <<endl;
-      else
-	  cout << "the parent process id is: " << ppid << endl;
+      //     cout << "the current process id is: " << pid << endl;
+      //if(ppid < 0)
+//	 cout << "there is no parent for this process." <<endl;
+      //    else
+      //  cout << "the parent process id is: " << ppid << endl;
    }
    if (child > 0)
    {
@@ -45,11 +45,11 @@ int main()
       std::cout << "in the parent process: " << endl << parent << std::endl;
       pid_t ppid = getppid();
       pid_t pid = getpid();
-      cout << "the current process id is: " << pid << endl;
-      if (ppid < 0)
-	 cout << "no parent for this process" << endl;
-      else
-	 cout << "the parent process id is: " << ppid << endl;
+      //cout << "the current process id is: " << pid << endl;
+      //if (ppid < 0)
+//	 cout << "no parent for this process" << endl;
+      //    else
+      // cout << "the parent process id is: " << ppid << endl;
    }
    else if (child < 0)
       cout << "no child created" << endl;
