@@ -15,7 +15,7 @@ CCCFLAGS = -Wall -g -std=c++11 -lpthread -lX11
 
 # all is called a target, after the colon you have dependencies
 # ie. "the target all is dependent on the executables
-all : programming_assn
+all : programming_assn programming_assn2
 
 # the target <excecutable1> is dependent on the list of dependencies
 # the line following  is the required executable (don't need to adjust it)
@@ -27,6 +27,8 @@ all : programming_assn
 # if there is more than one problem to do on an assignment you can compile
 # all the questions at the same time
 programming_assn : programming_assn.o
+	$(CCC) $(CCCFLAGS) -o $@ $^
+programming_assn2 : programming_assn2.o
 	$(CCC) $(CCCFLAGS) -o $@ $^
 
 # default rule compiling .cc to .o
@@ -48,4 +50,4 @@ clean:
 
 # Clean out your directory including executables with command "clean-all"
 clean-all: clean
-	rm -f programming_assn
+	rm -f programming_assn programming_assn2
